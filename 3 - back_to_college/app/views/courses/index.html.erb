@@ -1,0 +1,12 @@
+<!-- method: :get or :method => :get .. Either works -->
+<%= link_to("New Course: #{course.name}", new_course_path, method: :get, 
+class: "btn btn-info") %>
+
+<% @courses.each do |course| %>
+
+<!-- #{course.name} is make the value string; (course.id) for /:id -->
+<%= link_to("Course Name: #{course.name}", course_path(course.id), method: :get, 
+class: "btn btn-info") %>
+<br>
+
+<% end %>

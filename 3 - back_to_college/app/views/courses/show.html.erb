@@ -1,0 +1,10 @@
+
+
+<%= @course.name %>
+<%= @students.each do |student| %>
+<p>Name: <%= student.name %></p>
+<% end %>
+
+<%= button_to("edit", edit_course_path, :method => :get, class = "btn btn-alert")%>
+
+<%= button_to("delete", course_path(@course.id), :method => :delete, class = "btn btn-danger")%>
